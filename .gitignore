@@ -1,0 +1,6 @@
+__pycache__
+Makefile
+*.mp4
+.vscode
+data/
+output.tmp
