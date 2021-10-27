@@ -103,6 +103,8 @@ class Adam(BaseOptimizer):
         lr: float,
     ) -> None:
         """Updates parameters and optimizer_state in place"""
+        for i in range(len(optimizer_state.step)):
+            optimizer_state.step[i] += 1
         torch.optim._functional.adam(
             parameters,
             gradients,
@@ -110,7 +112,7 @@ class Adam(BaseOptimizer):
             optimizer_state.exp_avg_sqs,
             optimizer_state.max_exp_avg_sqs,
             # the default step starts from 0.
-            state_steps=[x + 1 for x in optimizer_state.step],
+            state_steps=optimizer_state.step,
             amsgrad=False,
             beta1=0.9,
             beta2=0.999,
