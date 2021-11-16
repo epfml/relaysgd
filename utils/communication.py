@@ -269,7 +269,7 @@ class GossipMechanism:
         rank = get_rank()
         tensor.sub_(self._last_sent_tensor, alpha = 1-self._w[rank, rank])
 
-        total_weight = 1-self._w[rank, rank]
+        total_weight = self._w[rank, rank].clone()
 
         recv_buffer = torch.empty_like(tensor)
         for neighbor in self._topology.neighbors(rank):
