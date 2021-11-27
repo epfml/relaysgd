@@ -1,6 +1,6 @@
 # RelaySGD
 
-[RelaySum for Decentralized Deep Learning on Heterogeneous Data](https://papers.nips.cc/paper/2021/file/ebbdfea212e3a756a1fded7b35578525-Paper.pdf)
+RelaySum for Decentralized Deep Learning on Heterogeneous Data
 
 Abstract: Because the workers only communicate with few neighbors without central coordination, these updates propagate progressively over the network.
 This paradigm enables distributed training on networks without all-to-all connectivity, helping to protect data privacy as well as to reduce the communication cost of distributed training in data centers.
@@ -10,6 +10,8 @@ RelaySum uses spanning trees to distribute information exactly uniformly across 
 In contrast, the typical gossip averaging mechanism only distributes data uniformly asymptotically while using the same communication volume per step as RelaySum.
 We prove that RelaySGD, based on this mechanism, is independent of data heterogeneity and scales to many workers, enabling highly accurate decentralized deep learning on heterogeneous data.
 
+- [Paper](https://papers.nips.cc/paper/2021/file/ebbdfea212e3a756a1fded7b35578525-Paper.pdf)
+- [Slides](https://thijs.link/relaysgd-slides/index.html#0)
 
 ## Assumed environment
 
