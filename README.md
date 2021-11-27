@@ -1,6 +1,6 @@
 # RelaySGD
 
-RelaySum for Decentralized Deep Learning on Heterogeneous Data
+[RelaySum for Decentralized Deep Learning on Heterogeneous Data](https://papers.nips.cc/paper/2021/file/ebbdfea212e3a756a1fded7b35578525-Paper.pdf)
 
 Abstract: Because the workers only communicate with few neighbors without central coordination, these updates propagate progressively over the network.
 This paradigm enables distributed training on networks without all-to-all connectivity, helping to protect data privacy as well as to reduce the communication cost of distributed training in data centers.
@@ -94,3 +94,15 @@ A few files here that might be of interest:
 - [paper-figures/algorithms.py](paper-figures/algorithms.py) contains simulation code for decentralized learning on a single node. It has implementations of many algorithms (RelaySGD, RelaySGD/Grad, D2, DPSGD, Gradient tracking)
 - [paper-figures/random_quadratics.py](paper-figures/random_quadratics.py) implements the synthetic functions we test the algorithms with (B.4)
 - [paper-figures/tuning.py](paper-figures/tuning.py) contains the logic we use to automatically tune learning rates for experiments with random quadratics.
+
+## Reference
+If you use this code, please cite the following paper
+
+```
+@inproceedings{vogels2021relaysum,
+  title={Relaysum for decentralized deep learning on heterogeneous data},
+  author={Vogels, Thijs and He, Lie and Koloskova, Anastasia and Karimireddy, Sai Praneeth and Lin, Tao and Stich, Sebastian U and Jaggi, Martin},
+  booktitle={Thirty-Fifth Conference on Neural Information Processing Systems},
+  year={2021}
+}
+```
