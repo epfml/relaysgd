@@ -24,17 +24,17 @@ We ran deep learning experiments with PyTorch Distributed using MPI. [environmen
 
 ## Code organization
 
-- The entrypoint for our deep learning code is [train.py](deep-learning/train.py).
-- You manually need to start multiple instances of [train.py](deep-learning/train.py). This could be through MPI, Slurm or a simple script such as [dispatch.py](deep-learning/dispatch.py)
+- The entrypoint for our deep learning code is [train.py](train.py).
+- You manually need to start multiple instances of [train.py](train.py). This could be through MPI, Slurm or a simple script such as [dispatch.py](dispatch.py)
 - It can run different experiments based on its global `config` variable. 
-- All the `config`'s used in our experiments are listed in the scheduling code under [deep-learning/experiments](deep-learning/experiments).
-- The __RelaySGD__ algorithm is implemented starting from line 225 in [algorithms.py](deep-learning/algorithms.py).
+- All the `config`'s used in our experiments are listed in the scheduling code under [experiments](experiments).
+- The __RelaySGD__ algorithm is implemented starting from line 225 in [algorithms.py](algorithms.py).
 - The __RelaySum__ communication mechanism is in [utils/communication.py](utils/communication.py) from line 85.
 - Hyperparameters (`config` overrides) used in our experiments can be found in the [experiments/](experiments) directory.
 
 ## Academic version of the algorithm
 
-The real implementation of RelaySGD is in line 225 in [algorithms.py](deep-learning/algorithms.py). 
+The real implementation of RelaySGD is in line 225 in [algorithms.py](algorithms.py). 
 In the real version, the code represents a single worker, and communication is explicit.
 Below, we include an ‘academic’ version of the algorithm that simulates all workers in a single process.
 
